@@ -13,12 +13,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Pseudocode
-// 8. loop through guaranteed elements, replace
-// elements in passwork array. 
-
 // create criteria possibilities
-var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var lowercase = "abcdefghijklmnopqrstuvwxyz".split();
 var uppercase = [];
 lowercase.forEach(i => {
   uppercase.push(i.toUpperCase());
