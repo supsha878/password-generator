@@ -14,15 +14,8 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // Pseudocode
-
-// 4. figure out which character type is which?
-// 5. make empty string var
-// 6. random draw
-// 7. put characters into password
 // 8. loop through guaranteed elements, replace
 // elements in passwork array. 
-// 9. join characters in arry?
-// 10. return password.
 
 // create criteria possibilities
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -53,28 +46,50 @@ function generatePassword() {
   // collect character possibilities
   var charPossiblities = [];
 
-   for (i = 0; i < choices.length; i++) {
-     if (choices[i]) {
+  for (i = 0; i < choices.length; i++) {
+    if (choices[i]) {
       charPossiblities = charPossiblities.concat(possibilities[i]);
-     }
-   }
+    }
+  }
 
-   // validate character choice input
-   if (charPossiblities.length === 0) {
+  // validate character choice input
+  if (charPossiblities.length === 0) {
     window.alert("Please choose at least one type of character.");
     return "";
-   }
+  }
 
-   // 4. figure out which character type is which?
-   // ???
+  // 4. figure out which character type is which?
+  // ???
 
-   
+  //return Math.floor(Math.random() * max);
+  // randomly select characters
+  var password = [];
+  for (i = 1; i <= passLength; i++) {
+    var newChar = charPossiblities[Math.floor(Math.random() * charPossiblities.length)];
+    console.log(newChar);
+    password.push(newChar);
+  }
 
-  return charPossiblities;
+  // 8. loop through guaranteed elements, replace
+// elements in passwork array. 
 
+
+
+  // 9. join characters in arry?
+  // 10. return
+
+  // should i separate these into different functions?
+  //should i do check
+  // github pages.
+  return password.join("");
 }
 
 //pseudocode done
 // 1. get user preferences
 // 2. create buckets (above 1)
 // 3. identify & collect the buckets
+// 5. make empty string var
+// 6. random draw
+// 7. put characters into password
+// 9. join characters in arry?
+// 10. return password.
